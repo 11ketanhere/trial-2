@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <table> 
+        <tr>
+            <th> 
+                <form onsubmit="event.preventDefault(); onFormSubmit();" autocomplete="off">
+                
+                    <div>     
+                        <label>ID*</label><label class="validation-error hide" id="idValidationError">This field is required.</label>
+                       <td><input type="text" placeholder="Enter ID" name="id" id="id"></td> 
+                </div> 
+                <div>
+                    <label>Name</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                    <input type="text" placeholder="Enter Name" name="fullName" id="fullName">
+                </div> 
+                <div>
+                    <label>Age</label><label class="validation-error hide" id="ageValidationError">This field is required</label>
+                    <input type="text" placeholder="Enter age" name="age" id="age">
+                </div> 
+                <div>
+                    <label>Gender</label><label class="validation-error hide" id="genderValidationError">This field is required</label>
+                   <select id="gender">
+                    <option value="">Select</option>
+                    <option value="Male">male</option>
+                    <option value="Female">female</option>
+                    <option value="Other">other</option>
+                   </select>
+                    <!-- <input type="text" placeholder="male/female" name="gender" id="gender"> -->
+                </div> 
+                <div class="form-action-buttons">
+                    <input type="submit" value="Add">
+                </div> 
+            
+                </form>
+               
+            </th>
+        </tr>
+   
+    </table>
+      <h1>Employee List</h1>
+    <table class="list" id="employeeList">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th> 
+                <th>Gender</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+
